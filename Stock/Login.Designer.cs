@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,8 +41,10 @@
             this.Textbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.Textbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -75,13 +78,14 @@
             this.linkLabel1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.linkLabel1.LinkColor = System.Drawing.Color.GhostWhite;
             this.linkLabel1.LinkVisited = true;
-            this.linkLabel1.Location = new System.Drawing.Point(140, 241);
+            this.linkLabel1.Location = new System.Drawing.Point(140, 333);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(133, 17);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "ForgetPassword?";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Yellow;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label1
             // 
@@ -126,7 +130,7 @@
             this.button1.ImageZoom = 50;
             this.button1.LabelPosition = 41;
             this.button1.LabelText = "LOGIN";
-            this.button1.Location = new System.Drawing.Point(16, 276);
+            this.button1.Location = new System.Drawing.Point(16, 260);
             this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(257, 56);
@@ -205,6 +209,10 @@
             this.panel3.Size = new System.Drawing.Size(843, 46);
             this.panel3.TabIndex = 1;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +238,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,6 +256,7 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox Textbox2;
         private Bunifu.Framework.UI.BunifuTileButton button1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
